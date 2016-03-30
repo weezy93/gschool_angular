@@ -3,12 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>{{ greeting }}</title>
+    <link rel="stylesheet" type="text/css" href="./main.css" />
   </head>
   <body>
+    <section>
 
-    <input type="text" placeholder="What is your name?" ng-init="name = 'BoJack'" ng-model='name' autofocus="">
+      <input type="text" placeholder="What is your name?" ng-init="name = 'BoJack'" ng-model='name' autofocus="">
 
-    <h1>My name is: {{ name }}<span id="name"></span></h1>
+      <h1>Yelling: {{ name | uppercase }}</h1>
+      <h1>Whispering: {{ name | lowercase }}</h1>
+
+
+      <h2>{{3.14159265359 | currency : '€'}}</h2>
+
+      </select>
+      <h2>{{3.14159265359 | number : '3'}}</h2>
+      <h2>{{3.14159265359 | number : '6'}}</h2>
+      <h2>{{3.14159265359 | number : '1'}}</h2>
+<hr>
+      <h1>select how many digits to round to..</h1>
+      <select ng-model="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+      <h1>Pi is rounded to {{ select }}
+        <ng-pluralize  count='select' when="{'1': 'digit', 'other': 'digits'}"></ng-pluralize></h1>
+      <h1>{{ 3.14159265359 | number: (select) }}</h1>
+    </section>
+
+
 
 
 <!-- vanilla js -->
