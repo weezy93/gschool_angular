@@ -33,8 +33,22 @@
       <h1>Pi is rounded to {{ select }}
         <ng-pluralize  count='select' when="{'1': 'digit', 'other': 'digits'}"></ng-pluralize></h1>
       <h1>{{ 3.14159265359 | number: (select) }}</h1>
-    </section>
 
+
+<hr>
+
+      <h1>the most helpful tip calculator</h1>
+      <label for="cost">Your Meal cost: </label><input type="text" placeholder="$$.$$" ng-model="cost">
+    <br>
+      <label for="tip">How Much Do you want to tip?</label>
+      <select ng-model="tip">
+          <option value=".10">10%</option>
+          <option value=".15">15%</option>
+          <option value=".20">20%</option>
+      </select>
+      <h3>Subtotal: {{ cost | currency }}</h3>
+      <h3>Tip: {{ cost * tip | currency }} </h3>
+    </section>
 
 
 
