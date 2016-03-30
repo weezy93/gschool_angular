@@ -11,3 +11,14 @@ data-binding saves a lot of code, has a larger community and online content
 - it initializes teh angularJS framework automatically, placed at the HTML tag
 so it can regulate the DOM hierarchy. it will only process the elements where
 the directive is applied ( child elements of the tag it is placed on )
+
+5. ng-model directive binds the value of an input, select, textarea to a
+property, therefore on the scope, therefore
+ if there is any change in the value, the DOM is manipulated
+ 6. dirty-checking is how angular sees if a control has been interacted with (?)
+ 7. Find a way to set the initial value of "name" as "BoJack" (without writing a controller).
+- ng-init="name = 'BoJack'"
+8. {{ }} are expressions
+7. two-way data-binding attaches values to a $scope variable and the dom is
+updated whenever those key-value pairs are altered
+9. https://www.ng-book.com/p/The-Digest-Loop-and-apply/
