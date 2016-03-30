@@ -1,5 +1,6 @@
 1. Why learn Angular JS over other frameworks like Ember, Backbone, Knockout, etc?
- - Angular has a smaller footprint, the template is built in, two-way
+ - Angular has a smaller footprint, the template is built in, two-way, backbone
+is more of a view, not a full framework
 data-binding saves a lot of code, has a larger community and online content
 2. People have some very strong opinions about Angular. What are 3 common complaints people have about Angular?
 - directives API is very complex
@@ -22,3 +23,5 @@ property, therefore on the scope, therefore
 7. two-way data-binding attaches values to a $scope variable and the dom is
 updated whenever those key-value pairs are altered
 9. https://www.ng-book.com/p/The-Digest-Loop-and-apply/
+digest is like a loop continually listening for changes. when changes occur, the
+digest loop fires
