@@ -162,12 +162,32 @@
     <!-- <section ng-controller="MyFirstController">
       <h1>My name is: {{name}}</h1>
       <input ng-model="name" type="text" placeholder="What is your name?" autofocus>
-    </section> -->
+    </section>
 
     <section ng-controller="ExercisesController">
       <h2 class="{{FavColor}}">favorite color: {{ FavColor }}!</h2>
       <h3>there are {{ secondsInACentury }} seconds in a century</h3>
       <h3>{{ rightNow | date : "EEEE, MMMM, yyyy"}}</h3>
+    </section> -->
+
+  <section ng-controller="MadLibs">
+      <form>
+        <input type="text" placeholder="Enter a boy's name" ng-model="boyName" autofocus>
+      <br>
+        <input type="text" placeholder="Enter an adjective" ng-model="adjective">
+      <br>
+        <input type="text" placeholder="Enter a plural noun" ng-model="pluralNoun">
+      <br>
+        <input type="text" placeholder="Enter a plural noun" ng-model="pluralNoun2">
+      <br>
+        <input type="text" placeholder="Enter an insect, plural" ng-model="insect">
+      <br>
+        <input type="text" placeholder="Enter a plural noun" ng-model="pluralNoun3">
+      <br>
+        <input type="text" placeholder="Enter a verb ending in 's'" ng-model="verb">
+      </form>
+  Dear Abby...
+      <h3>I'm in love with <span>{{ boyName }}</span>. He's so <span>{{ adjective }}</span>! He has big flat <span>{{ pluralNoun }}</span>, and when our <span>{{ pluralNoun2 }}</span> meet, I get <span>{{ insect }}</span> in my stomach. I've fallen for him like a ton of <span>{{ pluralNoun3 }}</span>, and he <span>{{ verb }}</span> for me, too. But I think he's got another girlfriend. What should I do?</h3>
     </section>
 
   </main>
