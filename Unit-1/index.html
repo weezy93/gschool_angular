@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app ng-cloak>
   <head>
     <meta charset="utf-8">
     <title>{{ greeting }}</title>
     <link rel="stylesheet" type="text/css" href="./main.css" />
   </head>
   <body ng-init="names=['Harry', 'Ron', 'Hermione', 'Sirius', 'Hedwig', 'Tonks']">
-    <section>
+    <main>
 
-      <input type="text" placeholder="What is your name?" ng-init="name = 'BoJack'" ng-model='name' autofocus="">
+      <!-- <input type="text" placeholder="What is your name?" ng-init="name = 'BoJack'" ng-model='name'>
 
       <h1>Yelling: {{ name | uppercase }}</h1>
       <h1>Whispering: {{ name | lowercase }}</h1>
@@ -75,10 +75,90 @@
 
         <ul ng-init="symbols=['&#9824', '&#9827', '&#9829', '&#9830']">
           <li ng-repeat='symbol in symbols'>{{ symbol }}</li>
-        </ul>
+        </ul> -->
 
+<!-- when truthy, show; when falsy, don't show -->
+        <!-- <div ng-show='3 + 4 == 5'>
+          3 + 4 isn't 5, don't show
+        </div>
 
+        <div ng-show='3 + 4 == 7'>
+          3 + 4 is 7, do show
+        </div>
+
+        <div ng-hide='3 + 4 == 5'>
+            3 + 4 isn't 5, don't hide
+        </div>
+
+        <div ng-hide='3 + 4 == 7'>
+          3 + 4 is 7, do hide
+        </div> -->
+
+<!-- <br><br>
+        <article>
+          <form>
+            <fieldset>
+              <legend><h3>Sign up page</h3></legend>
+                <input type="password" placeholder="password" ng-model="password" ng-class="{red: password.length < 6, green: password.length >= 6}" autofocus>
+                <p ng-class="{red: password.length < 6, green: password.length >= 6}">
+                  Your password is {{ password.length }} characters
+                </p>
+                <h3 ng-show="password.length < 6">Password is invalid</h3>
+                <button ng-show="password.length >= 6">sign up!</button>
+            </fieldset> -->
+          <!-- </form> -->
+<!-- use ng-class to change display: none to visibility: hidden -->
+          <!-- </form>
+        </article> -->
+<br>
+    <section ng-init="cameras=[
+  {
+    title: 'Nikon D3100 DSLR',
+    image: 'http://ecx.images-amazon.com/images/I/713u2gDQqML._SX522_.jpg',
+    rating: 3.4,
+    price: 369.99,
+    onSale: true
+  },
+  {
+    title: 'Canon EOS 70D',
+    image: 'http://ecx.images-amazon.com/images/I/81U00AkAUWL._SX522_.jpg',
+    rating: 2.0,
+    price: 1099.0,
+    onSale: false
+  },
+  {
+    title: 'Nikon D810A',
+    image:'http://ecx.images-amazon.com/images/I/91wtXIfLl2L._SX522_.jpg',
+    rating: 4.2,
+    price: 3796.95,
+    onSale: true
+  }
+]">
+      <h1>Camera Shop</h1>
+        <label for="sort">Sort by: </label>
+        <select ng-model="sort">
+          <option value="rating">rating</option>
+          <option value="price">price</option>
+        </select>
+        <br>
+        <div class="camera" ng-repeat="camera in cameras | orderBy: sort">
+          <img ng-src="{{ camera.image }}" alt="camera image" />
+          <ul ng-show="camera.onSale===true">
+            <li><strong>{{ camera.title }}</strong></li>
+            <li>price: {{ camera.price }} <span ng-show="camera.onSale===true">ON SALE!</span></li>
+            <li>rating: {{ camera.rating }}</li>
+          </ul>
+        </div>
+
+        </select>
     </section>
+
+<!-- if values are repeated, must adjust for that -->
+    <!-- <ul ng-init="numbers=[1,1,2,5,6,9,9,9]">
+      <li ng-repeat="number in numbers track by $index">{{ number }}</li>
+    </ul> -->
+
+  </main>
 
 
 

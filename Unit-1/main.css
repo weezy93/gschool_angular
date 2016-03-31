@@ -2,10 +2,14 @@ body {
   width: 100%;
   font-size: 16px;
 }
-section {
+main {
   width: 80%;
   margin-left: 20%;
   font-size: 2rem;
+}
+
+ul {
+  font-size: 3rem;
 }
 
 input, select {
@@ -14,4 +18,26 @@ input, select {
 
 span {
   text-decoration: underline;
+}
+
+.green {
+  color: #12bf3c;
+}
+
+.red {
+  color: #eb4247;
+}
+
+.camera {
+  width: 40%;
+  display: block;
+}
+
+.camera img {
+  width: 100%;
+  display: block;
+}
+
+.camera ul {
+  list-style: none;
 }
