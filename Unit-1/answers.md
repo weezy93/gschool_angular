@@ -25,3 +25,18 @@ updated whenever those key-value pairs are altered
 9. https://www.ng-book.com/p/The-Digest-Loop-and-apply/
 digest is like a loop continually listening for changes. when changes occur, the
 digest loop fires
+
+10. ng-init allows initial values to be set, and allows for data to be accessed
+in child html elements
+11. ng-src and ng-href allow for angular expressions to be passed into src and
+href tags and behave normally, rather than literally searching for a url or path
+with {{}} in it
+12. directives are angular markers on the dom that attach a behavior.  you can
+create custom directives or use built in directives
+13. with ng-class you can use strings, objects, or arrays of strings or objects
+to define class names. using an object allows for logic to be done in the view
+so that it is more dynamic, checking to see if values are truthy or falsy and
+altering the class depending on the case
+14. ng-repeat displays items in their index order
+15. ng-repeat breaks if there are duplicate items and there is no specification
+in how to handle them. nothing will be rendered

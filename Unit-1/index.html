@@ -111,7 +111,7 @@
           <!-- </form>
         </article> -->
 <br>
-    <section ng-init="cameras=[
+    <!-- <section ng-init="cameras=[
   {
     title: 'Nikon D3100 DSLR',
     image: 'http://ecx.images-amazon.com/images/I/713u2gDQqML._SX522_.jpg',
@@ -133,7 +133,7 @@
     price: 3796.95,
     onSale: true
   }
-]">
+]" ng-class="{yellow: camera.onSale===true}">
       <h1>Camera Shop</h1>
         <label for="sort">Sort by: </label>
         <select ng-model="sort">
@@ -145,18 +145,20 @@
           <img ng-src="{{ camera.image }}" alt="camera image" />
           <ul ng-show="camera.onSale===true">
             <li><strong>{{ camera.title }}</strong></li>
-            <li>price: {{ camera.price }} <span ng-show="camera.onSale===true">ON SALE!</span></li>
+            <li>price: {{ camera.price }} <span ng-show="camera.onSale===true" ng-class="{yellow: camera.onSale===true}">ON SALE!</span></li>
             <li>rating: {{ camera.rating }}</li>
           </ul>
         </div>
 
         </select>
-    </section>
-
+    </section> -->
+<br>
 <!-- if values are repeated, must adjust for that -->
     <!-- <ul ng-init="numbers=[1,1,2,5,6,9,9,9]">
       <li ng-repeat="number in numbers track by $index">{{ number }}</li>
     </ul> -->
+
+
 
   </main>
 
