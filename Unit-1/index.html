@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app ng-cloak>
+<html ng-app="firstApp">
   <head>
     <meta charset="utf-8">
     <title>{{ greeting }}</title>
@@ -110,7 +110,7 @@
 <!-- use ng-class to change display: none to visibility: hidden -->
           <!-- </form>
         </article> -->
-<br>
+<!-- <br> -->
     <!-- <section ng-init="cameras=[
   {
     title: 'Nikon D3100 DSLR',
@@ -159,6 +159,16 @@
     </ul> -->
 
 
+    <!-- <section ng-controller="MyFirstController">
+      <h1>My name is: {{name}}</h1>
+      <input ng-model="name" type="text" placeholder="What is your name?" autofocus>
+    </section> -->
+
+    <section ng-controller="ExercisesController">
+      <h2 class="{{FavColor}}">favorite color: {{ FavColor }}!</h2>
+      <h3>there are {{ secondsInACentury }} seconds in a century</h3>
+      <h3>{{ rightNow | date : "EEEE, MMMM, yyyy"}}</h3>
+    </section>
 
   </main>
 
@@ -172,5 +182,6 @@
     <script type="text/javascript" src = 'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script type="text/javascript" src = './index.js'></script>
+    <script type="text/javascript" src = './app.js'></script>
   </body>
 </html>
