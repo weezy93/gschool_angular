@@ -40,3 +40,16 @@ altering the class depending on the case
 14. ng-repeat displays items in their index order
 15. ng-repeat breaks if there are duplicate items and there is no specification
 in how to handle them. nothing will be rendered
+
+16. $scope is a javascript object that connects the controllers and views
+17. a module is a collection of directives, controllers, filters, and
+configuration info
+18. $scope is passed as an argument so that the controller has access to it and
+can set and use $scope in the view
+19. angular controllers are most like Express locals object
+
+20. $rootScope is the parent scope accessible anywhere in the view
+21. $scope inherits from the $rootScope
+22. ng-controller, ng-repeat, ng-if, ng-view, ng-switch all create their own
+scopes
+23. this can create another scope and not properly link the two 
