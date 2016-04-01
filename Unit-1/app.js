@@ -18,3 +18,27 @@ app.controller('MadLibs', function ($scope) {
   $scope.pluralNoun3 = "";
   $scope.verb = "";
 });
+
+
+app.controller('randomNumber', function ($scope) {
+  $scope.number = 5;
+  $scope.pickRandomNumber = function () {
+    $scope.number = Math.floor(Math.random() * 10) + 1;
+  };
+});
+
+app.controller('reverseWord', function ($scope) {
+  $scope.word = '';
+  $scope.reverseWord = function (word) {
+    var splitArray = word.split('').reverse().join('');
+    $scope.word = splitArray;
+    return $scope.word;
+    // OR
+    // var reverseArray = [];
+    // for (var i = 0; i < splitArray.length; i++) {
+    //   reverseArray[splitArray.length-i] = (splitArray[i]);
+    // }
+    // $scope.word = reverseArray.join('');
+    // return $scope.word;
+  };
+});
