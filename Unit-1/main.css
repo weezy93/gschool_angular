@@ -98,6 +98,14 @@ span {
   color: white;
 }
 
+.winflag {
+  width: 80%;
+  font-size: 6rem;
+  color: #12bf3c;
+  margin: auto;
+  text-align: center;
+}
+
 .win {
   background-color: #12bf3c;
 }

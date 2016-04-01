@@ -45,8 +45,10 @@ app.controller('reverseWord', function ($scope) {
 
 
 app.controller('pingPong', function ($scope) {
-  $scope.player1 = {score: 0, win: false};
-  $scope.player2 = {score: 0, win: false};
+  $scope.player1 = {name: 'Player1', score: 0, win: false};
+  $scope.player2 = {name: 'Player2', score: 0, win: false};
+  $scope.player1Serving = true;
+
   $scope.reset = function () {
     $scope.player1 = {score: 0, win: false};
     $scope.player2 = {score: 0, win: false};
@@ -56,8 +58,8 @@ app.controller('pingPong', function ($scope) {
     if (player.score === 11) {
       player.win = true;
     }
-    if (player.score > 11) {
-      reset();
+    if (($scope.player1.score + $scope.player2.score) % 2 === 0) {
+      $scope.player1Serving = !$scope.player1Serving;
     }
   };
 });
