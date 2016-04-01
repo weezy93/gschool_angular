@@ -42,3 +42,22 @@ app.controller('reverseWord', function ($scope) {
     // return $scope.word;
   };
 });
+
+
+app.controller('pingPong', function ($scope) {
+  $scope.player1 = {score: 0, win: false};
+  $scope.player2 = {score: 0, win: false};
+  $scope.reset = function () {
+    $scope.player1 = {score: 0, win: false};
+    $scope.player2 = {score: 0, win: false};
+  };
+  $scope.addPoint = function (player, reset) {
+    player.score ++;
+    if (player.score === 11) {
+      player.win = true;
+    }
+    if (player.score > 11) {
+      reset();
+    }
+  };
+});
