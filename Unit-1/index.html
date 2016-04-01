@@ -202,7 +202,8 @@
       <button ng-click="reverseWord(word)">Reverse!</button>
     </div> -->
 
-    <section id="pingpong" ng-controller="pingPong">
+<!-- pingpong -->
+    <!-- <section id="pingpong" ng-controller="pingPong">
 
       <div class="playerContainer">
         <article class="player1" ng-model="player1" ng-click="addPoint(player1)" ng-class="{win: player1.win, lose: player2.win}">
@@ -222,7 +223,38 @@
       <h1 class="winflag" ng-show="player1.win">{{ player1.name }} Wins!</h1>
       <h1 class="winflag" ng-show="player2.win">{{ player2.name }} Wins!</h1>
       <button id="reset" ng-click="reset()">reset!</button>
-    </section>
+    </section> -->
+<!-- end ping pong -->
+
+<!-- random color -->
+  <!-- <section class="randomColor" ng-controller="colorController">
+    <h3>The div was entered {{ enterCount }} times</h3>
+
+    <div class="container" ng-model="enterCount" ng-mouseenter="enterCount = enterCount + 1; bg = randomColor()" ng-style="{'background-color' : bg}">
+
+    </div>
+    <button ng-click="replay()">Replay colors</button>
+  </section> -->
+<!-- end random color -->
+
+
+<section>
+  <h1>Contacts App</h1>
+  <form>
+      <label for="name">Name</label>
+      <input type="text"  placeholder="name" ng-model="contacts">
+<br>
+      <label for="email">Email</label>
+      <input type="email" placeholder="email">
+<br>
+      <label for="phone">Phone</label>
+      <input type="text" placeholder="123-456-7890">
+<br><br>
+      <label for="Search">Search</label>
+      <input type="text" placeholder="name">
+  </form>
+</section>
+
 
 
   </main>

@@ -1,6 +1,7 @@
 body {
   width: 100%;
   font-size: 16px;
+  font-family: "Courier New";
 }
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
@@ -98,7 +99,7 @@ span {
   color: white;
 }
 
-.winflag { 
+.winflag {
   width: 80%;
   font-size: 6rem;
   color: #12bf3c;
@@ -112,4 +113,35 @@ span {
 
 .lose {
   background-color: #eb4247;
+}
+/* end ping pong */
+
+main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.randomColor {
+  display: flex;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.container {
+  margin: auto;
+  width: 60%;
+  height: 60vh;
+  border-style: solid;
+}
+
+.randomColor button{
+  width: 40%;
+  margin: auto;
+  height: 5vh;
+  font-size: 4rem;
+  background-color: rgb(80, 11, 88);
+  color: white;
 }

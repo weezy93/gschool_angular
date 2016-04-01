@@ -63,3 +63,55 @@ app.controller('pingPong', function ($scope) {
     }
   };
 });
+
+// NOT DONE
+// app.controller('colorController', function($scope) {
+//   $scope.enterCount = 0;
+//   $scope.colorArray = [];
+//   $scope.randomColor = function () {
+//     var x=Math.round(0xffffff * Math.random()).toString(16);
+//     var y=(6-x.length);
+//     var z="000000";
+//     var z1 = z.substring(0,y);
+//     var color = "#" + z1 + x;
+//     $scope.colorArray.push(color);
+//     console.log($scope.colorArray);
+//     return color;
+//   };
+//   $scope.replaying = false;
+//   $scope.replay = function() {
+//   var displayPrevColor = function() {
+//     if(){
+//       $scope.replaying = false;
+//     } else {
+//       $timeout(displayPrevColor, 1000);
+//     }
+//     // do some logic to change color
+//     // if done replay colors
+//     // else
+//     // end if/else
+//     };
+//     if (!$scope.replaying) {
+//       $scope.replaying = true;
+//       // This timeout starts the timeout loop
+//       $timeout(function() { displayPrevColor(); }, 500);
+//     }
+//   };
+// });
+
+
+app.controller('contactsController', function($scope) {
+  $scope.contacts = [{ id: 9,
+      name: 'Steve Rogers',
+      email: 'capn@avengers.org',
+      phone: '(111) 111-1111',
+    },
+    { id: 10,
+      name: 'Bruce Banner',
+      email: 'smash@avengers.org',
+      phone: '(222) 222-2222',
+    }];
+
+}).controller('searchController', function ($scope) {
+
+});
