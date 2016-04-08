@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller="InputController">
+
+    <form>
+      <input type="text" ng-model="input" autofocus/>
+    </form>
+    <h1>{{ input | pigLatin }}</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/controllers.js"></script>
+    <script type="text/javascript" src="./js/directives.js"></script>
+    <script type="text/javascript" src="./js/filters.js"></script>
+    <script type="text/javascript" src="./js/services.js"></script>
+  </body>
+</html>

@@ -140,7 +140,7 @@ main {
 .randomColor button{
   width: 40%;
   margin: auto;
-  height: 5vh;
+  /*height: 5vh;*/
   font-size: 4rem;
   background-color: rgb(80, 11, 88);
   color: white;

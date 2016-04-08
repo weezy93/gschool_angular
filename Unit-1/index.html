@@ -231,14 +231,21 @@
     <h3>The div was entered {{ enterCount }} times</h3>
 
     <div class="container" ng-model="enterCount" ng-mouseenter="enterCount = enterCount + 1; bg = randomColor()" ng-style="{'background-color' : bg}">
-
     </div>
-    <button ng-click="replay()">Replay colors</button>
+    <button ng-click="replay()">Replay</button>
   </section> -->
 <!-- end random color -->
+<!-- ng-animate -->
+<section class="randomColor" ng-controller="colorController">
+  <h3>The div was entered {{ enterCount }} times</h3>
 
+  <div class="container" ng-model="enterCount" ng-mouseenter="enterCount = enterCount + 1; bg = randomColor()" ng-style="{'background-color' : bg}">
+  </div>
+  <button ng-click="replay()">Replay</button>
+</section>
+<!-- ng-animate -->
 
-<section>
+<!-- <section>
   <h1>Contacts App</h1>
   <form>
       <label for="name">Name</label>
@@ -257,6 +264,8 @@
 
 
 
+
+
   </main>
 
 
@@ -268,6 +277,7 @@
 
     <script type="text/javascript" src = 'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
     <script type="text/javascript" src = './index.js'></script>
     <script type="text/javascript" src = './app.js'></script>
   </body>
